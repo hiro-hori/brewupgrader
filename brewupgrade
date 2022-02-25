@@ -1,0 +1,9 @@
+#!/bin/bash
+
+brewupgrade_dir=$HOME/w/brewupgrader/
+log_path=$brewupgrade_dir/execute.log
+
+/usr/local/bin/brew upgrade >> $log_path 2>&1
+
+osascript -e 'display notification "upgrade succeeded" with title "Homebrew Upgrader"'
+
